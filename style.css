@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Montserrat:wght@100;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100&family=Rubik:wght@500&family=Simonetta&display=swap');
+
+        /* ====================
+            Essential CSS
+            ==================== */
+        
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        background: linear-gradient(
+            to right,
+            #2D3536 0%,
+            #2D3536 50%,
+            #43484A 50%,
+            #43484A 100%
+          );
+    }
+
+    img{
+        display: inline-block;
+        width: 100%;
+    }
+
+    h1,h2,h3,h4{
+        color: #ffffff;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    li{
+        list-style: none;
+    }
+
+        /*======================
+            Utility Classes 
+        ===================== */
+    
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-heading{
+        font-size: 6rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .sub-heading{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    
+    .para{
+        font-size: 1.6rem;
+        line-height: 1.6;
+        font-weight: 400;
+        color: #74797B;
+    }
+
+        /*======================
+            Header Section
+        ===================== */
+
+    #header{
+        min-height: 10vh;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 5rem;
+    }
+
+    #logo{
+        width: 10rem;
+        cursor: pointer;
+    }
+
+    #search-bar,#menu-bar{
+        width: 4rem;
+        cursor: pointer;
+    }
+
+    #search-bar{
+        margin-right: 2rem;
+    }
+
+
+        /*======================
+            Main Section
+        ===================== */
+
+
+    #main{
+        height: calc(100% - 10vh);
+        width: 100%;
+    }
+
+    #cup{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 70rem;
+    }
+
+    .left{
+        width: 50%;
+        min-height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3rem 0 15rem 0;
+        align-items: flex-start;
+        padding-left: 5%;
+    }
+
+    .right{
+        width: 50%;
+        min-height: 100%;
+    }
+
+    .left-lower-box,.right-lower-box{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 40rem;
+        padding: 2rem;
+    }
+
+    .left-lower-box{
+        border-left: 5px solid orange;
+        padding-left: 2rem;
+    }
+
+    .right-lower-box{
+        position: absolute;
+        bottom: 8%;
+        right: 2%;
+    }
+
+    #icon{
+        width: 3rem;
+    }
+
+        /*======================
+            Media Queries
+        ===================== */
+
+
+         /*  Desktop  */
+
+@media (max-width:1250px) {
+
+    html{
+        font-size: 56.25%;
+    }
+
+}
+
+         /*  Mobile  */
+
+@media (max-width:600px) {
+
+    html{
+            font-size: 42% ;
+        }
+
+
+    .left-lower-box{
+        position: absolute;
+        bottom: 17%;
+    }
+
+    .right-lower-box{
+        bottom: 5%;
+    }
+}
+
+@media (max-width:330px) {
+
+    html{
+        font-size: 35% ;
+    }
+
+    #cup{
+        width: 40rem;
+    }
+
+    .left-lower-box{
+        position: absolute;
+        bottom: 16%;
+    }
+
+    .right-lower-box{
+        bottom: 2%;
+    }
+    
+}
